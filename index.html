@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Laboratory ToolKit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="horizontal-nav">
+            <ul class="unstyled">
+                <li><a class="active" href="">Home</a></li>
+                <li><a href="">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="side-nav">
+        <ul class="unstyled">
+            <li><a href="">Molarity</a></li>
+            <li><a class="active" href="">Concentration</a></li>
+            <li><a href="">Time</a></li>
+            <li><a href="">Conversions</a></li>
+        </ul>
+    </div>
+    <section class="calculation-area">
+        <div class="container grid">
+            <div class="container inputElement">
+                <h4>Concentration 1</h4>
+                <input type="number" name="concentration1" id="conc1">
+                <select name="initial_concentration_unit" id="initialConcentrationUnit">
+                    <option value="0.001">mM</option>
+                    <option value="1">uM</option>
+                    <option value="1000">nanoM</option>
+                    <option value="1000000">picoM</option>
+                    <option value="0.001">mg/mL</option>
+                    <option value="1">ug/mL</option>
+                    <option value="1000">ng/mL</option>
+                    <option value="1000000">pg/mL</option>
+                </select>
+            </div>
+            <div class="container inputElement">
+                <h4>Volume 1</h4>
+                <input type="number" name="volume1" id="vol1">
+                <select name="initial_volume_unit" id="initialVolumeUnit">
+                    <option value="0.001">mL</option>
+                    <option value="1">uL</option>
+                    <option value="1000">nL</option>
+                    <option value="1000000">pL</option>
+                </select>
+            </div>
+            <div class="container inputElement">
+                <h4>Concentration 2</h4>
+                <input type="number" name="concentration2" id="conc2">
+                <select name="final_concentration_unit" id="finalConcentrationUnit">
+                    <option value="0.001">mM</option>
+                    <option value="1">uM</option>
+                    <option value="1000">nanoM</option>
+                    <option value="1000000">picoM</option>
+                    <option value="1000">mg/mL</option>
+                    <option value="1">ug/mL</option>
+                    <option value="1000">ng/mL</option>
+                    <option value="1000000">pg/mL</option>
+                </select>
+            </div>
+            <div class="container inputElement">
+                <h4>Volume 2</h4>
+                <input type="number" name="volume2" id="vol2">
+                <select name="final_volume_unit" id="finalVolumeUnit">
+                    <option value="0.001">mL</option>
+                    <option value="1">uL</option>
+                    <option value="1000">nL</option>
+                    <option value="1000000">pL</option>
+                </select>
+            </div>
+        </div>
+        <div class="container">
+            <p>The result is: <span id="result-text"> </span> </p>
+            <button id="btn-calculate" class="btn">Calculate!</button>
+        </div>
+    </section>
+    <footer>
+        <p class="title copyright">Copyright Stefano Rocchetti - 2023</p>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+
+
+</html>
