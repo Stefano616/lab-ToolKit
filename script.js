@@ -12,13 +12,13 @@ let result = 0
 // consider the conversion in the formula
 function concentration() {
     Number(conc1.value) === 0 ?
-        result = Number(conc2.value) * units[2].value * Number(vol2.value) * units[3].value / Number(vol1.value) * units[1].value :
+        result = Number(conc2.value) * units[2].value * Number(vol2.value) * units[3].value / (Number(vol1.value) * units[1].value) :
         Number(conc2.value) === 0 ?
-            result = Number(conc1.value) * units[0].value * Number(vol1.value) * units[1].value / Number(vol2.value) * units[3].value :
+            result = Number(conc1.value) * units[0].value * Number(vol1.value) * units[1].value / (Number(vol2.value) * units[3].value) :
             Number(vol1.value) === 0 ?
-                result = Number(conc2.value) * units[2].value * Number(vol2.value) * units[3].value / Number(conc1.value) * units[0].value :
+                result = Number(conc2.value) * units[2].value * Number(vol2.value) * units[3].value / (Number(conc1.value) * units[0].value) :
                 Number(vol2.value) === 0 ?
-                    result = Number(conc1.value) * units[0].value * Number(vol1.value) * units[1].value / Number(conc2.value) * units[2].value :
+                    result = Number(conc1.value) * units[0].value * Number(vol1.value) * units[1].value / (Number(conc2.value) * units[2].value) :
                     alert("Please, define 3 inputs for the formula");
     return result
 }
